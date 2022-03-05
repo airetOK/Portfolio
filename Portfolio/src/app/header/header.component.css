@@ -1,0 +1,13 @@
+li:nth-last-of-type(1) {
+    align-self: center;
+    padding-left: 0.5rem;
+    cursor: pointer;
+}
+
+img {
+    height: 1.5rem;
+}
+
+img:hover { 
+    transform: scale(1.1); 
+}
