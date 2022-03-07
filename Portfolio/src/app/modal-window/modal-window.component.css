@@ -1,0 +1,48 @@
+.custom-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100%;
+}
+
+#innerbox {
+   backdrop-filter: blur(3px);
+   display: inline-block;
+   border-top: 0.2rem solid black;
+   border-bottom: 0.2rem solid black;   padding: 1rem;
+   animation-name: fade-in;
+   animation-duration: 0.75s;
+   overflow-y: auto;
+   max-height: 20rem;
+}
+
+@keyframes fade-in {
+    from { 
+        opacity: 0; 
+    }
+    to {
+        opacity: 1;
+    };
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

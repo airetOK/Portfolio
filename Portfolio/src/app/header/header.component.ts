@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Constants } from 'src/constants';
 
 @Component({
@@ -8,6 +9,7 @@ import { Constants } from 'src/constants';
 })
 export class HeaderComponent implements OnInit {
 
+  name: any;
   title: string = Constants.title;
   contacts: string = Constants.contacts;
   about: string = Constants.about;
@@ -16,9 +18,11 @@ export class HeaderComponent implements OnInit {
   experience: string = Constants.experience;
   download: string = Constants.download;
 
-  constructor() { }
+  constructor(private router: Router) {
+  }
 
   ngOnInit(): void {
+    
   }
 
 }
