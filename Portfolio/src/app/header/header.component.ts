@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Constants } from 'src/constants';
+import { ModalWindowComponent } from '../modal-window/modal-window.component';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,7 @@ import { Constants } from 'src/constants';
 })
 export class HeaderComponent implements OnInit {
 
-  name: any;
+  static languageTranslation: string = 'UA';
   title: string = Constants.title;
   contacts: string = Constants.contacts;
   about: string = Constants.about;
@@ -23,6 +24,20 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     
+  }
+
+  navigate(event: string) {
+    this.router.navigateByUrl('/' + event);
+  }
+
+  changeLanguageTranslation() {
+    if (HeaderComponent.languageTranslation === 'UA') {
+      HeaderComponent.languageTranslation = 'ENG';
+      (<HTMLImageElement>document.querySelector(".flag")).src = '/assets/gb.svg';
+    } else {
+      HeaderComponent.languageTranslation = 'UA';
+      (<HTMLImageElement>document.querySelector(".flag")).src = '/assets/ua.svg';
+    }
   }
 
 }
