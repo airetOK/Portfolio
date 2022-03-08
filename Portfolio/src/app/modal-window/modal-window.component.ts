@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { Constants } from 'src/constants';
 
 @Component({
@@ -9,15 +9,18 @@ import { Constants } from 'src/constants';
 })
 export class ModalWindowComponent implements OnInit {
 
-  key: string = '';
-  data: any = '';
+  static data: any = '';
 
-  constructor(private router: ActivatedRoute) {
-    this.key = this.router.snapshot.data['key'];
-    this.data = Constants.paramMap.get(this.key);
+  constructor(private router: Router) {
+    let key = this.router.getCurrentNavigation()?.extras?.state?.['example'];    
+    ModalWindowComponent.data = Constants.paramMap.get(key);
    }
 
   ngOnInit(): void {
+  }
+
+  get getData() {
+    return ModalWindowComponent.data;
   }
 
 }
