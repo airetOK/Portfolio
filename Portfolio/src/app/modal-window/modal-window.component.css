@@ -11,11 +11,13 @@
    backdrop-filter: blur(3px);
    display: inline-block;
    border-top: 0.2rem solid black;
-   border-bottom: 0.2rem solid black;   padding: 1rem;
+   border-bottom: 0.2rem solid black;   
+   padding: 1rem;
    animation-name: fade-in;
    animation-duration: 0.75s;
    overflow-y: auto;
    max-height: 20rem;
+   white-space: pre-line;
 }
 
 @keyframes fade-in {
