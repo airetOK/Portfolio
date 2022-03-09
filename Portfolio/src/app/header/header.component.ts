@@ -10,7 +10,6 @@ import { ModalWindowComponent } from '../modal-window/modal-window.component';
 })
 export class HeaderComponent implements OnInit {
 
-  currentData: any = '';
   static languageTranslation: string = 'ua';
   title: string = Constants.ua_title;
   contacts: string = Constants.ua_contacts;
@@ -22,7 +21,6 @@ export class HeaderComponent implements OnInit {
 
   constructor(private router: Router) {
     let url = window.location.pathname.substring(1);
-    
     this.router.navigate([url], { state: { example: HeaderComponent.languageTranslation + '_' + url } });
   }
 
