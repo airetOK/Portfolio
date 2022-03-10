@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, RouteReuseStrategy } from '@angular/router';
+import { Router } from '@angular/router';
 import { Constants } from 'src/constants';
 import { ModalWindowComponent } from '../modal-window/modal-window.component';
 
