@@ -21,6 +21,10 @@ ul {
     display: flex;
 }
 
+.toggle-column {
+    display: flex;
+}
+
 @media only screen and (max-width: 991px) {
         li:nth-last-of-type(1) {
             order: 1;
@@ -42,5 +46,13 @@ ul {
         }
         li:nth-child(6) {
             order: 7;
+        }
+        ul {
+            display: flex;
+            flex-direction: row;
+        }
+        .toggle-column {
+            display: block;
+            width: 50%;
         }
 } 
